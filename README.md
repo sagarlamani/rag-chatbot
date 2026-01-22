@@ -82,6 +82,25 @@ The application will be available at:
 3. Ask questions about the uploaded document
 4. The chatbot will use RAG to answer based on the document content
 
+## Deployment
+
+### Railway Deployment (Backend + Frontend)
+
+This project can be deployed to Railway with both backend and frontend services.
+
+**Quick Steps:**
+1. Push code to GitHub (already done: `https://github.com/sagarlamani/rag-chatbot.git`)
+2. Create Railway project and connect GitHub repo
+3. Deploy Backend service (uses `railway.json`)
+4. Deploy Frontend service (same repo, configure start command)
+5. Set `API_URL` in Frontend to point to Backend URL
+
+**Full Guide:** See [RAILWAY_FULL_DEPLOYMENT.md](./RAILWAY_FULL_DEPLOYMENT.md) for detailed instructions.
+
+**Other Options:**
+- Backend only: See [RAILWAY_DEPLOYMENT.md](./RAILWAY_DEPLOYMENT.md)
+- Quick reference: See [DEPLOY_RAILWAY.md](./DEPLOY_RAILWAY.md)
+
 ## Notes
 - **Free LLM Option**: If OpenAI API key is not provided, the system will automatically use free HuggingFace models (local inference, no API needed)
 - Documents are processed and stored in a ChromaDB vector database
